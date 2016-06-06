@@ -1,0 +1,17 @@
+{
+  "name": "node_aws_s3_encryption",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test/s3_api_encryption_test.js"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.2.15",
+    "chai": "^3.4.1",
+    "crypto": "0.0.3",
+    "fs": "0.0.2",
+    "mocha": "^2.3.3",
+    "nconf":"^0.8.2",
+    "path": "^0.12.7"
+  }
+}
