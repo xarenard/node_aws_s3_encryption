@@ -108,14 +108,11 @@ describe("AWS S3 Test", function () {
                         done();
                     });
                 });
-
             });
-
 
             /**
              * Server Side Encryption
              */
-
             describe("With SSE-S3 (AES256) encryption", function () {
                 it("Should be successfull", function (done) {
                     s3.putObject({
@@ -145,12 +142,11 @@ describe("AWS S3 Test", function () {
                 });
             });
 
-
             /* *
              * Client side encryption
              *
              */
-            describe("With SSE-C(AES256) encryption", function () {
+            describe("With SSE-C (AES256) encryption", function () {
                 var md5sum = crypto.createHash('md5');
                 var keyCheckSum = md5sum.update(ENCRYPTION_KEY_AES_256).digest('base64');
 
@@ -198,7 +194,6 @@ describe("AWS S3 Test", function () {
                     });
                 });
 
-
                 it("And the object can not be read back with wrong key", function (done) {
                     var md5sum = crypto.createHash('md5');
                     md5sum.update(ENCRYPTION_KEY_AES_256).toString('hex');
@@ -216,7 +211,7 @@ describe("AWS S3 Test", function () {
                 });
             });
 
-            describe("With SSE-KMS Encryption", function () {
+            describe("With SSE-KMS encryption", function () {
                 it("The call should succeed", function (done) {
                     s3.putObject({
                         Bucket: BUCKET_NAME,
@@ -249,7 +244,6 @@ describe("AWS S3 Test", function () {
             });
         });
     });
-
 
     describe.skip("Deleting S3 bucket", function () {
         it("Deleting files", function (done) {

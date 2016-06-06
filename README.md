@@ -17,12 +17,12 @@ AWS S3 Test
           ✓ Should be successfull (374ms)
           ✓ And the object should exist in S3 (279ms)
           ✓ And the object can be retrieved back (462ms)
-        With SSE-C(AES256) encryption
+        With SSE-C (AES256) encryption
           ✓ Should be successfull (390ms)
           ✓ And the object should exist in S3 (297ms)
           ✓ And the the object can be read back with correct key (884ms)
           ✓ And the object can not be read back with wrong key (296ms)
-        With SSE-KMS Encryption
+        With SSE-KMS encryption
           ✓ The call should succeed (556ms)
           ✓ And the object should exist in S3 (291ms)
           ✓ And the object can be retrieved back (426ms)
