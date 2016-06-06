@@ -1,1 +1,0 @@
-https://github.com/xarenard/node_aws_s3_encryption
