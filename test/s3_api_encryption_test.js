@@ -23,13 +23,12 @@ nconf
     .file(
         {file: path.join("test/config", "config.json")});
 
-// change this
+// Key id for kms encryption
 const S3_KMS_KEY_ID = nconf.get("S3_KMS_KEY_ID");
 
 // congig aws
 AWS.config = {
     region: "eu-west-1",
-    // logger = process.stdout
 };
 
 describe("AWS S3 Test", function () {
