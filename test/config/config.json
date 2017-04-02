@@ -1,5 +1,3 @@
 {
-    "AWS_KEY_ACCESS_ID":"my access key",
-    "AWS_SECRET_ACCESS_KEY":"my secret key",
-    "KMS_KEY_ID":"kms_key_id"
+    "S3_KMS_KEY_ID":"arn:aws:kms:[REGION]:[ACCT_ID]:key/[KEY_ID]"
 }

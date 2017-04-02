@@ -16,7 +16,7 @@ const S3_OBJECT_ENCRYPTION_SSE_S3 = "sse_s3.txt";
 const S3_OBJECT_ENCRYPTION_SSE_C = "sse_c.txt";
 const S3_OBJECT_ENCRYPTION_SSE_KMS = "sse_kms.txt";
 
-// Azure accesskey and storage account
+// conf for key alias 
 var nconf = require('nconf');
 nconf
     .env()
@@ -42,6 +42,7 @@ describe("AWS S3 Test", function () {
                 .on('success', function (response) {
                     done();
                 }).on('error', function (err, response) {
+					console.log(err);
                 expect(err).not.to.be.null;
                 expect(err.statusCode).equals(409);
                 done();
